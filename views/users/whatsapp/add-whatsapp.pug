@@ -1,0 +1,91 @@
+extends ../../layout/user-layout
+block content
+    .d-flex.align-items-center.justify-content-between.gap-2.mb-4.flex-wrap
+        div 
+            nav(aria-label="breadcrumb")
+                ol.breadcrumb.mb-0.p-0
+                    li.breadcrumb-item
+                        a(href="/users/dashboard") Dashboard 
+                    li.breadcrumb-item.active(aria-current="page") Add Whatsapp
+
+
+
+    .row.justify-content-between
+        .col-lg-6.mb-4
+            .card.mb-0
+                .card-header
+                    h5.card-title Add Whatsapp
+                .card-body
+                    form( action="" method="" ) 
+                        .mb-4
+                            label.form-label Enter Whatsapp Name
+                            .input-group.input-group-flat
+                                input.form-control(type="text" name="" required placeholder="Enter Whatsapp Name")
+
+                        .mb-4
+                            label.form-label Enter Whatsapp No
+                            .input-group.input-group-flat
+                                input.form-control(type="text" name="" required placeholder="+91 1234567890") 
+
+                        .mb-4   
+                            .form-check.form-check-inline
+                                input.form-check-input.mt-0(
+                                    type="radio",
+                                    id="customRadio3",
+                                    name="customRadio1"
+                                )
+                                label.form-check-label(for="customRadio3")  Qr Scan And Connect 
+
+                            .form-check.form-check-inline
+                                input.form-check-input.mt-0(
+                                    type="radio",
+                                    id="customRadio4",
+                                    name="customRadio1"
+                                )
+                                label.form-check-label(for="customRadio4")  Code Enter Connect
+
+                        button.btn.btn-primary.w-100(type="submit") Connect Whatsapp
+
+
+
+
+        .col-lg-6.mb-4 
+            .code-qr-wrap.bg-light.h-100.rounded.align-content-center
+                .code-connect
+                    .code.mb-4
+                        ul.code-text
+                            li A
+                            li 7
+                            li K
+                            li 9
+                            li 2
+                            li 4
+                            li M
+                            li 9
+                            li N
+                    .inst.text-center.mb-4
+                        h6 Open WhatsApp on your phone
+                        ul.list-unstyled.text-muted.fs-14.mb-4 
+                            li.mb-2
+                                i.ti.ti-settings.me-2
+                                | Go to Settings → Linked Devices
+                            li
+                                i.ti.ti-link.me-2
+                                | Tap “Link a device” and enter this code
+                    .expired.mb-4.text-center.d-flex.justify-content-center.align-items-center.gap-2
+                        p.mb-0.text-muted Code expires in :
+                        span.fw-bold.text-primary.fs-5 01:30
+                    .row 
+                        .col-lg-6.text-end
+                            button.btn.btn-primary(type="button") Refresh Code
+                        .col-lg-6
+                            button.btn.btn-outline-primary(type="button") Use QR Instead
+
+                .qr-connect
+                    .mb-4
+                        .text-center
+                            img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoXgnU7FduTcy0Z7GyoXnMnCqLBwMwAXdiFw&s" alt="")
+
+                    .expired.mb-4.text-center.d-flex.justify-content-center.align-items-center.gap-2
+                        p.mb-0.text-muted Code expires in :
+                        span.fw-bold.text-primary.fs-5 01:30 

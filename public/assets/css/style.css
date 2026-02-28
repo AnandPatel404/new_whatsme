@@ -6054,7 +6054,7 @@ Author URL: https://themeforest.net/user/dreamstechnologies
   border: 1px solid var(--border-color);
   border-radius: 5px;
   color: inherit;
-  box-shadow: var(--box-shadow);
+  box-shadow: 2px 2px 0 var(--border-color);
   background-color: var(--white);
 }
 .card .header-title {
@@ -14285,3 +14285,18 @@ th.fc-day-header {
   border-radius: 8px;
   box-shadow: 3px 3px 0 var(--primary);
   border: 1px solid var(--primary);}
+
+
+.code-qr-wrap{padding: 20px;border-radius: 8px;}
+.code-text{display: flex;gap: 6px;justify-content: center;}
+.code-text li{padding: 4px;
+  background: white;
+  border: 1px solid var(--border-color);
+  height: 40px;
+  width: 40px;
+  border-radius: 4px;
+  text-align: center;
+  align-content: center;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--primary);}
