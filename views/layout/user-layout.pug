@@ -1,0 +1,78 @@
+doctype html
+html(lang="en") 
+    head
+        //- Meta Tags 
+        include meta
+        //- Favicon
+        include fav-icon
+        //- Bootstrap CSS
+        link(rel="stylesheet" href="/assets/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/assets/plugins/sweetalert2/sweetalert2.min.css")  
+        //- Daterangepicker CSS
+        link(rel="stylesheet" href="/assets/plugins/daterangepicker/daterangepicker.css")
+        //- Datatable CSS
+        link(rel="stylesheet" href="/assets/plugins/datatables/css/dataTables.bootstrap5.min.css" )
+        //- Flatpickr CSS
+        link(rel="stylesheet" href="/assets/plugins/flatpickr/flatpickr.min.css" )
+        //- Tabler Icon CSS
+        link(rel="stylesheet" href="/assets/plugins/tabler-icons/tabler-icons.min.css")
+        //- Select2 CSS
+        link(rel="stylesheet" href="/assets/plugins/select2/css/select2.min.css")
+        //- Simplebar CSS
+        link(rel="stylesheet" href="/assets/plugins/simplebar/simplebar.min.css")
+        //- Main CSS
+        link(rel="stylesheet" href="/assets/css/style.css" id="app-style")
+    body 
+        .main-wrapper
+            //- Header
+            include ../components/users/header
+            //- sidebar 
+            include ../components/users/sidebar
+            .page-wrapper
+                //- Start Content
+                .content.pb-0
+                    .container.p-0
+                        block content  
+                //- Footer
+                include ../components/users/footer
+
+
+
+        // jQuery
+        script(src="/assets/js/jquery-3.7.1.min.js")
+
+        // Bootstrap Core JS
+        script(src="/assets/js/bootstrap.bundle.min.js")
+
+        // Simplebar JS
+        script(src="/assets/plugins/simplebar/simplebar.min.js")
+
+        // Datatable JS
+        script(src="/assets/plugins/datatables/js/jquery.dataTables.min.js")
+        script(src="/assets/plugins/datatables/js/dataTables.bootstrap5.min.js")
+
+        // Daterangepicker JS
+        script(src="/assets/js/moment.min.js")
+        script(src="/assets/plugins/daterangepicker/daterangepicker.js")
+
+        // Apexchart JS
+        script(src="/assets/plugins/apexchart/apexcharts.min.js")
+        script(src="/assets/plugins/apexchart/chart-data.js")
+
+        // Custom Json JS
+        script(src="/assets/json/deals-project.js")
+
+        // Main JS
+        script(src="/assets/js/script.js")
+        script.
+            const links = document.querySelectorAll('#sidebar-menu ul li a');
+            const currentUrl = window.location.pathname;
+
+
+            links.forEach(link => {
+            if(link.getAttribute('href') === currentUrl) {
+            link.parentElement.classList.add('active');
+            }
+            });
+
+    block js

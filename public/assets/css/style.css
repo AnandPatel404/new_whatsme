@@ -27,7 +27,7 @@ Author URL: https://themeforest.net/user/dreamstechnologies
   --menu-item-hover-bg: rgba(var(--primary-rgb), 0.1);
   --menu-item-active-color: var(--primary);
   --menu-item-border: #E8E8E8;
-  --menu-item-active-bg: var(--danger-transparent);
+  --menu-item-active-bg: var(--primary-transparent);
   --menu-active-color: var(--primary);
   --submenu-active-color: var(--primary);
   --menu-active-color: var(--primary);
@@ -9100,7 +9100,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #2b2a2e;
-  background-color: var(--light);
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -14268,6 +14268,7 @@ th.fc-day-header {
 }
 
 
+.logo-width-160 img{width: 160px;}
 
 
 
@@ -14275,3 +14276,12 @@ th.fc-day-header {
 @media (max-width:676px) {
   .auth-section .auth-wrap{padding: 14px;}
 }
+
+
+
+
+.welcome{padding: 20px;
+  background-color: var(--primary-transparent);
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 var(--primary);
+  border: 1px solid var(--primary);}

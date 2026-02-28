@@ -1,0 +1,76 @@
+div#sidebar.sidebar
+    //- Start Logo
+    .sidebar-logo
+        div
+            //- Logo Normal
+            a.logo.logo-normal.logo-width-160(href="#")
+                include ../logo
+
+            //- Logo Small
+            a.logo-small(href="#")
+                include ../logo-small
+
+            //- Logo Dark
+            a.dark-logo(href="#")
+                img(src="/assets/img/logo-white.svg" alt="Logo")
+
+        button#toggle_btn.sidenav-toggle-btn.btn.border-0.p-0.active
+            i.ti.ti-arrow-bar-to-left
+
+        //- Sidebar Menu Close
+        button.sidebar-close
+            i.ti.ti-x.align-middle
+    //- End Logo
+
+    //- Sidenav Menu
+    .sidebar-inner(data-simplebar)
+        #sidebar-menu.sidebar-menu
+            ul
+                li.menu-title
+                    span Main Menu
+
+                li
+                    ul
+                        li: a(href="/users/dashboard") 
+                            i.ti.ti-dashboard
+                            span Dashboard
+
+                        li: a(href="") 
+                            i.ti.ti-dashboard
+                            span Session
+
+                        li: a(href="") 
+                            i.ti.ti-dashboard
+                            span Whatsapp Number 
+
+                li.menu-title
+                    span Camping
+                li
+                    ul 
+                        li.submenu
+                            a(href="javascript:void(0);")
+                                i.ti.ti-dashboard
+                                span Camping
+                                span.menu-arrow
+                            ul
+                                li: a(href="#") All Camping
+                                li: a(href="#") Create Camping 
+
+                li.menu-title
+                    span Plans
+
+                li
+                    ul 
+                        li: a(href="/users/plan") 
+                            i.ti.ti-medal
+                            span Plans 
+
+
+                li.menu-title
+                    span Support
+
+                li
+                    ul
+                        li: a(href="/users/help") 
+                            i.ti.ti-user
+                            span Help & Support
