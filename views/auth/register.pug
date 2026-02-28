@@ -1,0 +1,175 @@
+extends ../layout/auth-layout
+block content 
+    section.auth-section
+        .area
+            ul.circles
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+        //- .bg-img
+        .container
+            .auth-wrap.mb-3
+                .row 
+                    .col-lg-7.d-none.d-lg-block
+                        .content-wrap 
+                            .logo 
+                                include ../components/logo
+                            hr.my-4
+                            h2.mb-3 Everything to Simplify Your 
+                                span.text-primary WhatsApp Marketing
+                            p.fs-5 Seamless Messaging. Smarter Automation. Better Growth.
+
+                            ul.auth-points 
+                                li 
+                                    i.ti.ti-chevron-right
+                                    | Automate responses to speed up customer support
+                                li 
+                                    i.ti.ti-chevron-right
+                                    | Reach your audience with personalized, high-impact messages
+                                li 
+                                    i.ti.ti-chevron-right
+                                    | Stay active 24/7 with smart automated replies
+                                li 
+                                    i.ti.ti-chevron-right
+                                    | Handle multiple WhatsApp accounts from a single dashboard
+                                li 
+                                    i.ti.ti-chevron-right
+                                    | Gain full control with real-time API & webhook support
+
+                            p 
+                                strong WhatsApp API made powerful with Whatsme — now with WordPress & Perfex CRM integration.
+                    .col-lg-5
+                        .auth-form-wrap
+                            .logo.mb-3.d-block.d-lg-none
+                                include ../components/logo
+                            .d-block 
+                                h3.mb-2 Get started with Whatsme !
+                                p Enter your email and register your account.
+
+                                form(action="")
+                                    .mb-3
+                                        label.form-label Email Address
+                                        .input-group.input-group-flat
+                                            input.form-control(type="email" name="email" required placeholder="Enter your email address")
+                                            span.input-group-text
+                                                i.ti.ti-mail
+
+
+                                    .mb-3
+                                        button.btn.btn-primary.w-100(type="submit") Send OTP
+
+                                    .mb-0
+                                        p.mb-3
+                                            | Already have an account?
+                                            a.link-primary.fw-bold.link-hover(href="/auth/login")  Login
+
+                                        .d-flex.align-items-center.justify-content-center.flex-wrap.gap-2
+
+                                            .text-center.flex-fill
+                                                a.p-1.btn.btn-outline-dark.d-flex.align-items-center.justify-content-center(
+                                                    href="javascript:void(0);"
+                                                )
+                                                    img.img-fluid.m-1(
+                                                        src="/assets/img/icons/google-logo.svg"
+                                                        alt="Google"
+                                                    )
+
+
+                            .d-block 
+                                h3.mb-2 Get started with Whatsme !
+                                p Please check your email and enter otp to verify
+
+                                form(action="")
+                                    .mb-3
+                                        .d-flex.align-items-center.justify-content-center.gap-3.mb-4
+                                            each num in [1,2,3,4,5,6]
+                                                input.otp-input.text-center.fs-26.fw-bold.rounded.w-100(
+                                                    type="text"
+                                                    id=`digit-${num}`
+                                                    name=`digit-${num}`
+                                                    maxlength="1"
+                                                    inputmode="numeric"
+                                                    pattern="[0-9]*"
+                                                )
+                                    .mb-3
+                                        button.btn.btn-primary.w-100(type="submit") Send OTP
+
+                                    .mb-0
+                                        p.mb-3
+                                            | Didn't get the code?
+                                            a.link-primary.fw-bold.link-hover(href="")  Resend
+
+
+                            .d-block 
+                                h3.mb-2 Get started with Whatsme !
+                                p Please enter your name and password to complete registration
+
+                                form(action="")
+                                    .mb-3
+                                        label.form-label Your Name
+                                        .input-group.input-group-flat
+                                            input.form-control(type="text" name="" required placeholder="Enter your Name ")
+                                            span.input-group-text
+                                                i.ti.ti-user
+
+                                    .mb-3
+                                        label.form-label  Phone No.
+                                        .input-group.input-group-flat
+                                            input.form-control(type="text" name="" required placeholder="Enter your Phone No")
+                                            span.input-group-text
+                                                i.ti.ti-phone
+
+                                    .mb-3
+                                        label.form-label Password
+                                        .input-group.input-group-flat.pass-group
+                                            input.form-control.pass-input(type="password" name="password" required placeholder="Enter your password")
+                                            span.input-group-text.toggle-password
+                                                i.ti.ti-eye-off
+                                    .mb-3
+                                        button.btn.btn-primary.w-100(type="submit") Send OTP
+
+                                    .mb-0
+                                        p.mb-3
+                                            | Already have an account?
+                                            a.link-primary.fw-bold.link-hover(href="/auth/register")  Login
+
+                                        .d-flex.align-items-center.justify-content-center.flex-wrap.gap-2
+
+                                            .text-center.flex-fill
+                                                a.p-1.btn.btn-outline-dark.d-flex.align-items-center.justify-content-center(
+                                                    href="javascript:void(0);"
+                                                )
+                                                    img.img-fluid.m-1(
+                                                        src="/assets/img/icons/google-logo.svg"
+                                                        alt="Google"
+                                                    )
+
+            include ../components/auth/footer
+
+    script.
+        document.querySelectorAll(".otp-input").forEach((input, index, inputs) => {
+
+            input.addEventListener("input", function () {
+
+                // Only allow numbers
+                this.value = this.value.replace(/[^0-9]/g, "");
+
+                if (this.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener("keydown", function (e) {
+                if (e.key === "Backspace" && !this.value && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+
+        });
