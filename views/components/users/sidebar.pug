@@ -35,9 +35,14 @@ div#sidebar.sidebar
                             i.ti.ti-dashboard
                             span Dashboard
 
-                        li: a(href="/users/add-whatsapp") 
-                            i.ti.ti-dashboard
-                            span Add Whatsapp 
+                        li.submenu
+                            a(href="javascript:void(0);")
+                                i.ti.ti-brand-whatsapp
+                                span Whatsapp
+                                span.menu-arrow
+                            ul
+                                li: a(href="/users/all-whatsapp") All Whatsapp
+                                li: a(href="/users/add-whatsapp") Add Whatsapp  
 
                         li: a(href="") 
                             i.ti.ti-dashboard

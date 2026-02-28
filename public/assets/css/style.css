@@ -14300,3 +14300,7 @@ th.fc-day-header {
   font-size: 21px;
   font-weight: 600;
   color: var(--primary);}
+
+
+
+.custom-table .table{border: none;border-collapse: unset;}

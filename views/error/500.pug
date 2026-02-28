@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        // Meta Tags
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        title Error 500 | Elevate your WhatsApp management with Whatsme – your go-to solution for bulk messaging, scheduling, and API integration
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Streamline your business with our advanced CRM template. Easily integrate and customize to manage sales, support, and customer interactions efficiently. Perfect for any business size")
+        meta(name="keywords" content="Advanced CRM template, customer relationship management, business CRM, sales optimization, customer support software, CRM integration, customizable CRM, business tools, enterprise CRM solutions")
+        meta(name="author" content="Dreams Technologies")
+        meta(name="robots" content="index, follow")
+
+        // Favicon
+        link(rel="shortcut icon" href="/assets/img/favicon.png")
+        link(rel="apple-touch-icon" href="/assets/img/apple-icon.png")
+
+        // CSS Files
+        link(rel="stylesheet" href="/assets/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/assets/plugins/tabler-icons/tabler-icons.min.css")
+        link(rel="stylesheet" href="/assets/plugins/simplebar/simplebar.min.css")
+        link(rel="stylesheet" href="/assets/css/style.css" id="app-style")
+
+    body.error-page
+        .main-wrapper
+            .container
+                .row.justify-content-center.align-items-center.vh-100
+                    .col-md-8.d-flex.align-items-center.justify-content-center.mx-auto
+                        div
+                            .error-img.mb-4
+                                img.img-fluid(src="/assets/img/500.svg" alt="Img")
+
+                            .text-center
+                                h2.mb-3 Oops, something went wrong
+                                p.mb-3 
+                                    | Error 500 Page not found. Sorry the page you looking for 
+                                    br
+                                    | doesn’t exist or has been moved
+                                .pb-4
+                                    a.btn.btn-primary(href="/")
+                                        i.ti.ti-chevron-left.me-1
+                                        | Back to Dashboard
+
+        // JS Files
+        script(src="/assets/js/jquery-3.7.1.min.js")
+        script(src="/assets/js/bootstrap.bundle.min.js")
+        script(src="/assets/plugins/simplebar/simplebar.min.js")
+        script(src="/assets/js/script.js")
