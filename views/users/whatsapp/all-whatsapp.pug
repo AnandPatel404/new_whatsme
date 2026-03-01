@@ -9,7 +9,6 @@ block content
                     li.breadcrumb-item.active(aria-current="page") All Whatsapp
 
 
-
     .row.justify-content-between
         .col-lg-12.mb-4
             .card.mb-0
@@ -35,6 +34,8 @@ block content
                                         .badge.bg-success  Active 
                                     td 
                                         .d-flex.gap-2.justify-content-end
+                                            span.btn.btn-icon.btn-md.btn-light(type="button" data-bs-toggle="modal" data-bs-target="#apipoup")
+                                                i.ti.ti-api   
                                             a.btn.btn-icon.btn-md.btn-light(href="/users/edit-whatsapp")
                                                 i.ti.ti-edit   
                                             a.btn.btn-icon.btn-md.btn-light(href="javascript:void(0);")
@@ -48,7 +49,24 @@ block content
                                         .badge.bg-danger  Inactive 
                                     td 
                                         .d-flex.gap-2.justify-content-end
+                                            span.btn.btn-icon.btn-md.btn-light(type="button" data-bs-toggle="modal" data-bs-target="#apipoup")
+                                                i.ti.ti-api   
                                             a.btn.btn-icon.btn-md.btn-light(href="/users/edit-whatsapp")
                                                 i.ti.ti-edit   
                                             a.btn.btn-icon.btn-md.btn-light(href="javascript:void(0);")
                                                 i.ti.ti-trash
+
+
+
+    .modal.fade#apipoup(tabindex="-1" role="dialog" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h4.modal-title#myapipoupLabel Api Key
+                    button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+                .modal-body
+                    form( action="" method="" ) 
+                        .mb-4 
+                            .input-group.input-group-flat
+                                input.form-control(type="text" name="" required value="ajhjdahajhfdahjhfjsdalhffjhff")
+                                button.btn.btn-outline-primary Copy

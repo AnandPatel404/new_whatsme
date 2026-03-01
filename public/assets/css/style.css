@@ -7333,11 +7333,11 @@ Author URL: https://themeforest.net/user/dreamstechnologies
   border-bottom: 1px solid var(--border-color);
 }
 .modal-header .btn-close {
-  background-color: var(--danger-transparent);
+  background-color: var(--primary-transparent);
   font-size: 8px;
   padding: 8px;
   border-radius: 50%;
-  color: var(--danger);
+  color: var(--primary);
   opacity: 1;
   position: relative;
 }
@@ -7345,7 +7345,7 @@ Author URL: https://themeforest.net/user/dreamstechnologies
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--danger); /* icon color */
+  background-color: var(--primary); /* icon color */
   mask: var(--bs-btn-close-bg) center/1em auto no-repeat;
   -webkit-mask: var(--bs-btn-close-bg) center/1em auto no-repeat;
 }
@@ -7361,15 +7361,15 @@ Author URL: https://themeforest.net/user/dreamstechnologies
   align-items: center;
 }
 .modal-header .btn-close.btn-close-modal:hover {
-  color: var(--danger);
+  color: var(--primary);
 }
 
 .filter-header .btn-close {
-  background-color: var(--danger-transparent);
+  background-color: var(--primary-transparent);
   font-size: 8px;
   padding: 8px;
   border-radius: 50%;
-  color: var(--danger) !important;
+  color: var(--primary) !important;
   opacity: 1;
   position: relative;
 }
@@ -7377,7 +7377,7 @@ Author URL: https://themeforest.net/user/dreamstechnologies
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--danger); /* icon color */
+  background-color: var(--primary); /* icon color */
   mask: var(--bs-btn-close-bg) center/1em auto no-repeat;
   -webkit-mask: var(--bs-btn-close-bg) center/1em auto no-repeat;
 }
